@@ -1,28 +1,28 @@
-# Faisal Haqqani — 3D Seamless Portfolio
+# Faisal Haqqani — Portfolio
 
-An interactive, slide-based portfolio for **Faisal Haqqani** (Sales Growth · SDR · Business Development), rendered as a single-page web app with 3D seamless transitions.
+Slide-based portfolio for **Faisal Haqqani** (Sales Growth · SDR · Business Development), rendered as a single-page web app with 3D slide transitions.
 
-## Highlights
+## Stack
 
-- **3D seamless slide transitions** using CSS `perspective` + `transform-style: preserve-3d`.
-- **Glass-morphic cards** with cursor-driven tilt and light-spot follow.
-- **Animated cosmic background** (aurora gradients, parallax grid floor, star field).
-- **Keyboard, wheel, click & swipe** navigation across 10 slides.
-- **Fully responsive** down to mobile widths, with `prefers-reduced-motion` respected.
-- **Zero dependencies** — pure HTML, CSS, and a small vanilla-JS slide engine.
+- Pure HTML, CSS, and a small vanilla-JS slide engine. No build step, no dependencies.
+- 3D slide transitions using CSS `perspective` + `transform-style: preserve-3d`.
+- Glass-morphic cards with cursor-driven tilt.
+- Animated background (aurora gradients, parallax grid floor, starfield).
+- Keyboard, wheel, click and swipe navigation.
+- Responsive down to mobile widths. Respects `prefers-reduced-motion`.
 
 ## Slides
 
-1. **Cover** — name, title, contact metadata.
-2. **Professional Summary**
-3. **Core Value I Bring** — four pillars.
-4. **Experience Timeline** — 5-stop horizontal 3D timeline.
-5. **Recent Roles** — Flowmingo AI & Skillstory.
-6. **Foundations** — Sinergi, Healthina, Markaz Inayah.
-7. **Education**
-8. **Certifications & Achievements** — HubSpot Sales Hub + MySkill UI/UX.
-9. **Tools & Skills**
-10. **Selected Focus & Contact**
+1. Cover — name, title, contact metadata.
+2. Professional Summary.
+3. Core Value — 4 cards.
+4. Experience Timeline — 5 stops.
+5. Recent Roles — Flowmingo AI & Skillstory.
+6. Earlier Roles — Sinergi, Healthina, Markaz Inayah.
+7. Education.
+8. Certifications & Achievements — HubSpot Sales Hub + MySkill UI/UX.
+9. Tools & Skills.
+10. Focus & Contact.
 
 ## Running locally
 
