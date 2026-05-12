@@ -4,20 +4,60 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Faisal Haqqani — Sales Growth Portfolio</title>
-  <meta name="description" content="3D seamless portfolio of Faisal Haqqani — Sales Growth, SDR, and Business Development." />
+  <meta name="description" content="Portfolio of Faisal Haqqani — Sales Growth, SDR, and Business Development. Scrollable page with parallax." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Ambient 3D background -->
+  <!-- Ambient parallax background -->
   <div class="cosmos" aria-hidden="true">
-    <div class="aurora aurora-1"></div>
-    <div class="aurora aurora-2"></div>
-    <div class="aurora aurora-3"></div>
-    <div class="grid-floor"></div>
-    <div class="stars"></div>
+    <div class="aurora aurora-1" data-parallax="0.25"></div>
+    <div class="aurora aurora-2" data-parallax="0.35"></div>
+    <div class="aurora aurora-3" data-parallax="0.45"></div>
+    <div class="grid-floor" data-parallax="0.15"></div>
+    <div class="stars" data-parallax="0.55"></div>
+  </div>
+
+  <!-- Floating decorative icons (parallax layer) -->
+  <div class="floating-icons" aria-hidden="true">
+    <span class="fly-icon" style="--top:8%; --left:6%; --size:34px; --speed:0.3; --delay:0s">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l2.39 6.96L22 10l-5.5 4.66L18.18 22 12 18.27 5.82 22l1.68-7.34L2 10l7.61-1.04L12 2z"/></svg>
+    </span>
+    <span class="fly-icon" style="--top:14%; --left:88%; --size:28px; --speed:0.45; --delay:-2s">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+    </span>
+    <span class="fly-icon" style="--top:22%; --left:12%; --size:24px; --speed:0.6; --delay:-4s">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 17l5-5 4 4 8-9"/><path d="M14 7h7v7"/></svg>
+    </span>
+    <span class="fly-icon" style="--top:30%; --left:78%; --size:30px; --speed:0.25; --delay:-1s">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l3 6 6 .9-4.5 4.4 1 6.7L12 17l-5.5 3 1-6.7L3 8.9 9 8z"/></svg>
+    </span>
+    <span class="fly-icon" style="--top:42%; --left:5%; --size:26px; --speed:0.5; --delay:-3s">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12c0 4.97-4.03 9-9 9-1.65 0-3.2-.44-4.53-1.22L3 21l1.22-4.47A8.96 8.96 0 0 1 3 12c0-4.97 4.03-9 9-9s9 4.03 9 9z"/></svg>
+    </span>
+    <span class="fly-icon" style="--top:50%; --left:92%; --size:32px; --speed:0.35; --delay:-5s">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5"/><line x1="12" y1="22" x2="12" y2="15.5"/><polyline points="22 8.5 12 15.5 2 8.5"/></svg>
+    </span>
+    <span class="fly-icon" style="--top:60%; --left:8%; --size:22px; --speed:0.65; --delay:-2.5s">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.8 5.5h5.7l-4.6 3.4 1.8 5.5L12 13l-4.7 3.4 1.8-5.5-4.6-3.4h5.7z"/></svg>
+    </span>
+    <span class="fly-icon" style="--top:68%; --left:84%; --size:28px; --speed:0.4; --delay:-1.5s">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h6l2 3h8v11a2 2 0 0 1-2 2H4z"/></svg>
+    </span>
+    <span class="fly-icon" style="--top:74%; --left:14%; --size:26px; --speed:0.55; --delay:-3.5s">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a13 13 0 0 1 0 18M12 3a13 13 0 0 0 0 18"/></svg>
+    </span>
+    <span class="fly-icon" style="--top:82%; --left:90%; --size:30px; --speed:0.3; --delay:-4.5s">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg>
+    </span>
+    <span class="fly-icon" style="--top:88%; --left:7%; --size:24px; --speed:0.5; --delay:-2s">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M8 7V5a4 4 0 0 1 8 0v2"/></svg>
+    </span>
+    <span class="fly-icon" style="--top:94%; --left:76%; --size:28px; --speed:0.4; --delay:-1s">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.5-7-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.5-7 11-7 11z"/></svg>
+    </span>
   </div>
 
   <!-- Top navigation bar -->
@@ -39,24 +79,29 @@
       </div>
     </div>
 
-    <nav class="counter" aria-label="Slide indicator">
-      <span id="slide-current">01</span>
+    <nav class="counter" aria-label="Scroll progress">
+      <span id="section-current">01</span>
       <span class="counter-sep">/</span>
-      <span id="slide-total">10</span>
+      <span id="section-total">10</span>
     </nav>
   </header>
 
-  <!-- Slide deck -->
-  <main class="deck" id="deck" tabindex="0" aria-label="3D slide deck">
-    <!-- Slide 1: Cover -->
-    <section class="slide slide--cover" data-slide="1">
+  <!-- Side anchor nav -->
+  <nav class="side-nav" aria-label="Section navigation">
+    <ul id="anchors"></ul>
+  </nav>
+
+  <!-- Scrollable page -->
+  <main class="page" id="page" aria-label="Portfolio">
+    <!-- Section 1: Cover -->
+    <section class="section section--cover" id="section-1" data-section="1" data-label="Cover">
       <div class="scene">
         <div class="floaters">
           <div class="float float-a"></div>
           <div class="float float-b"></div>
           <div class="float float-c"></div>
         </div>
-        <div class="cover">
+        <div class="cover reveal">
           <p class="eyebrow">Portfolio · 2026</p>
           <h1 class="display">
             <span class="display-line">Faisal</span>
@@ -69,19 +114,22 @@
             <li><span>LinkedIn</span>linkedin.com/in/faisalhaqq</li>
             <li><span>Phone</span>+62 851 4360 6501</li>
           </ul>
-          <p class="hint">Use <kbd>→</kbd> <kbd>←</kbd> or scroll to navigate · Press <kbd>F</kbd> for fullscreen</p>
+          <p class="hint">Scroll down to explore · <kbd>↓</kbd> arrow keys also work</p>
+          <a class="scroll-indicator" href="#section-2" aria-label="Scroll to next section">
+            <span></span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Slide 2: Professional Summary -->
-    <section class="slide slide--summary" data-slide="2">
+    <!-- Section 2: Professional Summary -->
+    <section class="section section--summary" id="section-2" data-section="2" data-label="Summary">
       <div class="scene">
-        <header class="slide-header">
-          <span class="slide-tag">01 · Professional Summary</span>
+        <header class="section-header reveal">
+          <span class="section-tag">01 · Professional Summary</span>
           <h2>About me</h2>
         </header>
-        <div class="glass tilt-card summary-card">
+        <div class="glass tilt-card summary-card reveal">
           <p>
             Sales professional with hands-on experience in outbound prospecting,
             lead qualification, and CRM-based pipeline management across startup
@@ -96,30 +144,30 @@
       </div>
     </section>
 
-    <!-- Slide 3: Core Value -->
-    <section class="slide slide--values" data-slide="3">
+    <!-- Section 3: Core Value -->
+    <section class="section section--values" id="section-3" data-section="3" data-label="Core Value">
       <div class="scene">
-        <header class="slide-header">
-          <span class="slide-tag">02 · Core Value</span>
+        <header class="section-header reveal">
+          <span class="section-tag">02 · Core Value</span>
           <h2>What I bring to the role</h2>
         </header>
         <div class="value-grid">
-          <article class="glass tilt-card value-card" style="--i:1">
+          <article class="glass tilt-card value-card reveal" style="--i:1">
             <div class="value-num">01</div>
             <h3>Pipeline Generation</h3>
             <p>Build early-stage pipeline through cold outreach and account targeting.</p>
           </article>
-          <article class="glass tilt-card value-card" style="--i:2">
+          <article class="glass tilt-card value-card reveal" style="--i:2">
             <div class="value-num">02</div>
             <h3>Message Strategy</h3>
             <p>Convert discovery insights into clear sales messaging and follow-up strategy.</p>
           </article>
-          <article class="glass tilt-card value-card" style="--i:3">
+          <article class="glass tilt-card value-card reveal" style="--i:3">
             <div class="value-num">03</div>
             <h3>CRM Discipline</h3>
             <p>Maintain clean CRM discipline for better forecasting and team visibility.</p>
           </article>
-          <article class="glass tilt-card value-card" style="--i:4">
+          <article class="glass tilt-card value-card reveal" style="--i:4">
             <div class="value-num">04</div>
             <h3>Analysis &amp; Reporting</h3>
             <p>Blend sales execution with analytical thinking — A/B testing and reporting.</p>
@@ -128,17 +176,17 @@
       </div>
     </section>
 
-    <!-- Slide 4: Experience Timeline (overview) -->
-    <section class="slide slide--timeline" data-slide="4">
+    <!-- Section 4: Experience Timeline (overview) -->
+    <section class="section section--timeline" id="section-4" data-section="4" data-label="Timeline">
       <div class="scene">
-        <header class="slide-header">
-          <span class="slide-tag">03 · Experience Timeline</span>
+        <header class="section-header reveal">
+          <span class="section-tag">03 · Experience Timeline</span>
           <h2>Roles in order</h2>
         </header>
         <div class="timeline">
           <div class="timeline-track"></div>
           <ol class="timeline-points">
-            <li class="tl-point" style="--p:0">
+            <li class="tl-point reveal" style="--p:0">
               <span class="tl-dot"></span>
               <div class="tl-card glass tilt-card">
                 <span class="tl-year">2019 – 2021</span>
@@ -146,7 +194,7 @@
                 <p>Web Content Editor &amp; Content Designer · Riyadh</p>
               </div>
             </li>
-            <li class="tl-point" style="--p:1">
+            <li class="tl-point reveal" style="--p:1">
               <span class="tl-dot"></span>
               <div class="tl-card glass tilt-card">
                 <span class="tl-year">2023</span>
@@ -154,7 +202,7 @@
                 <p>Creative Writer &amp; Meta Ads · Makassar</p>
               </div>
             </li>
-            <li class="tl-point" style="--p:2">
+            <li class="tl-point reveal" style="--p:2">
               <span class="tl-dot"></span>
               <div class="tl-card glass tilt-card">
                 <span class="tl-year">2024</span>
@@ -162,7 +210,7 @@
                 <p>Staff Coaching · Makassar</p>
               </div>
             </li>
-            <li class="tl-point" style="--p:3">
+            <li class="tl-point reveal" style="--p:3">
               <span class="tl-dot"></span>
               <div class="tl-card glass tilt-card">
                 <span class="tl-year">2025 – Now</span>
@@ -170,7 +218,7 @@
                 <p>Sales Growth Partner · Remote (HCMC)</p>
               </div>
             </li>
-            <li class="tl-point" style="--p:4">
+            <li class="tl-point reveal" style="--p:4">
               <span class="tl-dot"></span>
               <div class="tl-card glass tilt-card">
                 <span class="tl-year">2026</span>
@@ -183,15 +231,15 @@
       </div>
     </section>
 
-    <!-- Slide 5: Flowmingo + Skillstory deep dive -->
-    <section class="slide slide--exp" data-slide="5">
+    <!-- Section 5: Flowmingo + Skillstory deep dive -->
+    <section class="section section--exp" id="section-5" data-section="5" data-label="Recent Roles">
       <div class="scene">
-        <header class="slide-header">
-          <span class="slide-tag">04 · Recent Roles</span>
+        <header class="section-header reveal">
+          <span class="section-tag">04 · Recent Roles</span>
           <h2>2025 – 2026</h2>
         </header>
         <div class="exp-grid">
-          <article class="glass tilt-card exp-card">
+          <article class="glass tilt-card exp-card reveal">
             <header class="exp-head">
               <div>
                 <h3>Flowmingo AI</h3>
@@ -206,7 +254,7 @@
             </ul>
           </article>
 
-          <article class="glass tilt-card exp-card">
+          <article class="glass tilt-card exp-card reveal">
             <header class="exp-head">
               <div>
                 <h3>Skillstory</h3>
@@ -224,15 +272,15 @@
       </div>
     </section>
 
-    <!-- Slide 6: Earlier roles -->
-    <section class="slide slide--exp slide--exp-2" data-slide="6">
+    <!-- Section 6: Earlier roles -->
+    <section class="section section--exp section--exp-2" id="section-6" data-section="6" data-label="Earlier Roles">
       <div class="scene">
-        <header class="slide-header">
-          <span class="slide-tag">05 · Earlier Roles</span>
+        <header class="section-header reveal">
+          <span class="section-tag">05 · Earlier Roles</span>
           <h2>2019 – 2024</h2>
         </header>
         <div class="exp-grid exp-grid--3">
-          <article class="glass tilt-card exp-card">
+          <article class="glass tilt-card exp-card reveal">
             <header class="exp-head">
               <div>
                 <h3>Sinergi Business Solution</h3>
@@ -241,13 +289,13 @@
               <span class="badge">May – Oct 2024</span>
             </header>
             <ul class="bullets">
-              <li>Discovery &amp; needs-analysis with 20+ SME clients to surface growth bottlenecks.</li>
-              <li>Translated 24+ sessions into actionable executive reports.</li>
-              <li>Applied consultative communication to map pain points to value propositions.</li>
+              <li>Conducted discovery &amp; needs-analysis sessions with 20+ SME clients to identify growth bottlenecks.</li>
+              <li>Produced structured insights from 24+ client sessions and translated findings into actionable executive reports.</li>
+              <li>Applied consultative communication and active listening to uncover pain points and map value.</li>
             </ul>
           </article>
 
-          <article class="glass tilt-card exp-card">
+          <article class="glass tilt-card exp-card reveal">
             <header class="exp-head">
               <div>
                 <h3>Healthina Indonesia</h3>
@@ -256,44 +304,43 @@
               <span class="badge">Oct – Dec 2023</span>
             </header>
             <ul class="bullets">
-              <li>Designed &amp; optimized Meta Ads with audience analysis — lifted lead quality &amp; engagement ~25%.</li>
-              <li>Ran A/B tests to improve campaign performance and message effectiveness.</li>
-              <li>Aligned campaign messaging with buyer-journey stages.</li>
+              <li>Designed &amp; optimized Meta Ads using audience data, improving lead quality and engagement by ~25%.</li>
+              <li>Implemented A/B testing to improve campaign performance &amp; message effectiveness.</li>
+              <li>Aligned campaign messaging with buyer journey stages alongside marketing stakeholders.</li>
             </ul>
           </article>
 
-          <article class="glass tilt-card exp-card">
+          <article class="glass tilt-card exp-card reveal">
             <header class="exp-head">
               <div>
                 <h3>Markaz Inayah</h3>
                 <p>Web Content Editor &amp; Content Designer · Riyadh</p>
               </div>
-              <span class="badge">Jun 2019 – May 2021</span>
+              <span class="badge">2019 – 2021</span>
             </header>
             <ul class="bullets">
-              <li>Edited &amp; designed multichannel digital content with focus on clarity and persuasion.</li>
-              <li>Managed publication workflows in WordPress and Canva at scale.</li>
-              <li>Maintained campaign quality standards across releases.</li>
+              <li>Edited &amp; designed multichannel digital content with focus on clarity, persuasion &amp; consistency.</li>
+              <li>Managed publication workflows in WordPress &amp; Canva while maintaining quality standards.</li>
             </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Slide 7: Education -->
-    <section class="slide slide--education" data-slide="7">
+    <!-- Section 7: Education -->
+    <section class="section section--education" id="section-7" data-section="7" data-label="Education">
       <div class="scene">
-        <header class="slide-header">
-          <span class="slide-tag">06 · Education</span>
+        <header class="section-header reveal">
+          <span class="section-tag">06 · Education</span>
           <h2>Formal &amp; applied training</h2>
         </header>
         <div class="edu-grid">
-          <article class="glass tilt-card edu-card">
+          <article class="glass tilt-card edu-card reveal">
             <span class="badge">Jul 2018 – Feb 2022</span>
             <h3>Sekolah Tinggi Agama Islam Sabili Bandung</h3>
-            <p>Education Studies</p>
+            <p>Education Studies · Bandung, Indonesia</p>
           </article>
-          <article class="glass tilt-card edu-card">
+          <article class="glass tilt-card edu-card reveal">
             <span class="badge">May – Jul 2025</span>
             <h3>MySkill Indonesia</h3>
             <p>UI/UX Research &amp; Design Intensive Bootcamp</p>
@@ -302,15 +349,15 @@
       </div>
     </section>
 
-    <!-- Slide 8: Certifications -->
-    <section class="slide slide--certs" data-slide="8">
+    <!-- Section 8: Certifications & Achievements -->
+    <section class="section section--certs" id="section-8" data-section="8" data-label="Certifications">
       <div class="scene">
-        <header class="slide-header">
-          <span class="slide-tag">07 · Certifications &amp; Achievements</span>
+        <header class="section-header reveal">
+          <span class="section-tag">07 · Certifications &amp; Achievements</span>
           <h2>Certificates &amp; awards</h2>
         </header>
         <div class="cert-grid">
-          <article class="glass tilt-card cert-card">
+          <article class="glass tilt-card cert-card reveal">
             <div class="cert-ribbon">HubSpot Academy</div>
             <h3>HubSpot Sales Hub Software Certified</h3>
             <p class="muted">Validity: Dec 2025 – Jan 2027</p>
@@ -323,7 +370,7 @@
             </ul>
           </article>
 
-          <article class="glass tilt-card cert-card">
+          <article class="glass tilt-card cert-card reveal">
             <div class="cert-ribbon ribbon-2">MySkill Indonesia</div>
             <h3>Best Final Project — UI/UX Design Batch 21</h3>
             <p class="muted">Awarded Jun 2025</p>
@@ -341,15 +388,15 @@
       </div>
     </section>
 
-    <!-- Slide 9: Tools & Skills -->
-    <section class="slide slide--skills" data-slide="9">
+    <!-- Section 9: Tools & Skills -->
+    <section class="section section--skills" id="section-9" data-section="9" data-label="Tools & Skills">
       <div class="scene">
-        <header class="slide-header">
-          <span class="slide-tag">08 · Tools &amp; Skills</span>
+        <header class="section-header reveal">
+          <span class="section-tag">08 · Tools &amp; Skills</span>
           <h2>What I work with</h2>
         </header>
         <div class="skills-grid">
-          <article class="glass tilt-card skill-group">
+          <article class="glass tilt-card skill-group reveal">
             <h3>Sales &amp; CRM</h3>
             <ul class="chip-row">
               <li>HubSpot</li><li>Apollo</li><li>Notion</li>
@@ -358,21 +405,21 @@
               <li>B2B Sales</li><li>SaaS Sales</li>
             </ul>
           </article>
-          <article class="glass tilt-card skill-group">
+          <article class="glass tilt-card skill-group reveal">
             <h3>Data &amp; Analysis</h3>
             <ul class="chip-row">
               <li>Google Sheets</li><li>SPSS</li>
               <li>A/B Testing</li><li>Performance Reporting</li>
             </ul>
           </article>
-          <article class="glass tilt-card skill-group">
+          <article class="glass tilt-card skill-group reveal">
             <h3>Design &amp; Marketing</h3>
             <ul class="chip-row">
               <li>Figma</li><li>Meta Business Suite</li>
               <li>Mailchimp</li><li>Canva</li>
             </ul>
           </article>
-          <article class="glass tilt-card skill-group">
+          <article class="glass tilt-card skill-group reveal">
             <h3>Languages</h3>
             <ul class="chip-row">
               <li>English — Intermediate</li>
@@ -383,15 +430,15 @@
       </div>
     </section>
 
-    <!-- Slide 10: Portfolio Focus + Contact -->
-    <section class="slide slide--contact" data-slide="10">
+    <!-- Section 10: Focus + Contact -->
+    <section class="section section--contact" id="section-10" data-section="10" data-label="Contact">
       <div class="scene">
-        <header class="slide-header">
-          <span class="slide-tag">09 · Focus &amp; Contact</span>
+        <header class="section-header reveal">
+          <span class="section-tag">09 · Focus &amp; Contact</span>
           <h2>Open for SDR, BDR &amp; AE-track roles (remote or hybrid)</h2>
         </header>
         <div class="contact-wrap">
-          <div class="focus-list glass tilt-card">
+          <div class="focus-list glass tilt-card reveal">
             <h3>Portfolio Focus</h3>
             <ul class="bullets">
               <li>SDR / BDR Pipeline Building</li>
@@ -400,7 +447,7 @@
               <li>Consultative Discovery for SME &amp; B2B Clients</li>
             </ul>
           </div>
-          <div class="contact-card glass tilt-card">
+          <div class="contact-card glass tilt-card reveal">
             <h3>Contact</h3>
             <a class="contact-row" href="mailto:contact.faisalhaq@gmail.com">
               <span>Email</span>
@@ -424,21 +471,15 @@
     </section>
   </main>
 
-  <!-- Slide controls -->
-  <div class="controls" aria-hidden="false">
-    <button class="ctrl ctrl-prev" id="prev" aria-label="Previous slide">
-      <span></span>
-    </button>
-    <div class="dots" id="dots" role="tablist" aria-label="Slide dots"></div>
-    <button class="ctrl ctrl-next" id="next" aria-label="Next slide">
-      <span></span>
-    </button>
-  </div>
-
-  <!-- Progress bar -->
+  <!-- Scroll progress bar (top) -->
   <div class="progress" aria-hidden="true">
     <div class="progress-bar" id="progress-bar"></div>
   </div>
+
+  <!-- Back to top -->
+  <button class="back-top" id="back-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
 
   <script src="script.js" defer></script>
 </body>
