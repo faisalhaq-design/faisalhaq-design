@@ -870,3 +870,332 @@ p { margin: 0; }
   .reveal { transition-duration: 200ms; }
   html { scroll-behavior: auto; }
 }
+
+
+/* =========================================================
+   NEW ENHANCEMENTS — Custom Cursor
+   ========================================================= */
+.custom-cursor {
+  position: fixed;
+  top: 0; left: 0;
+  width: 20px; height: 20px;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.15s var(--ease), height 0.15s var(--ease), border-color 0.15s var(--ease), background 0.15s var(--ease);
+  mix-blend-mode: difference;
+  will-change: transform;
+}
+.custom-cursor.hover {
+  width: 48px; height: 48px;
+  border-color: var(--accent-2);
+  background: rgba(25, 212, 193, 0.08);
+}
+.cursor-trail {
+  position: fixed;
+  top: 0; left: 0;
+  width: 8px; height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  opacity: 0.35;
+  will-change: transform;
+}
+
+/* =========================================================
+   NEW: Text Scramble + Glow
+   ========================================================= */
+.scramble-text {
+  display: inline-block;
+  position: relative;
+}
+.scramble-text.done {
+  animation: text-glow 2s ease-in-out infinite alternate;
+}
+@keyframes text-glow {
+  from { text-shadow: 0 0 20px rgba(124,92,255,0.3), 0 0 40px rgba(124,92,255,0.1); }
+  to   { text-shadow: 0 0 30px rgba(25,212,193,0.3), 0 0 60px rgba(25,212,193,0.1); }
+}
+
+/* =========================================================
+   NEW: Typewriter Effect
+   ========================================================= */
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid var(--accent-2);
+  white-space: nowrap;
+  animation: typing-caret 0.8s step-end infinite;
+  width: 0;
+}
+.typewriter.done {
+  border-right: none;
+  animation: none;
+}
+@keyframes typing-caret {
+  0%, 100% { border-color: var(--accent-2); }
+  50%      { border-color: transparent; }
+}
+
+/* =========================================================
+   NEW: Enhanced Card Hover / Glow Border
+   ========================================================= */
+.glass:hover, .tilt-card:hover {
+  box-shadow:
+    0 40px 80px -30px rgba(124, 92, 255, 0.25),
+    0 0 0 1px rgba(124, 92, 255, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+.tilt-card {
+  transition: transform 250ms var(--ease-out), box-shadow 0.4s var(--ease);
+}
+.tilt-card:hover {
+  transform: perspective(900px) rotateX(var(--ry, 0deg)) rotateY(var(--rx, 0deg)) translateZ(12px) scale(1.015);
+}
+.glow-border {
+  position: relative;
+}
+.glow-border::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2), var(--accent-3));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s var(--ease);
+  pointer-events: none;
+}
+.glow-border:hover::after {
+  opacity: 1;
+}
+
+/* =========================================================
+   NEW: Stagger Utilities
+   ========================================================= */
+.stagger-1 { --stagger: 1; }
+.stagger-2 { --stagger: 2; }
+.stagger-3 { --stagger: 3; }
+.stagger-4 { --stagger: 4; }
+.stagger-5 { --stagger: 5; }
+.stagger-6 { --stagger: 6; }
+.stagger-7 { --stagger: 7; }
+.stagger-8 { --stagger: 8; }
+.reveal.stagger {
+  transition-delay: calc(var(--stagger, 0) * 100ms);
+}
+
+/* =========================================================
+   NEW: Animated Stat Bars
+   ========================================================= */
+.stat-bar {
+  position: relative;
+  height: 4px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+.stat-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border-radius: 2px;
+  width: 0%;
+  transition: width 1.2s var(--ease-out);
+}
+.stat-bar-fill.animate {
+  width: var(--fill, 0%);
+}
+.stat-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* =========================================================
+   NEW: Glitch / Chromatic Aberration on Hover
+   ========================================================= */
+.glitch-hover {
+  position: relative;
+}
+.glitch-hover::before,
+.glitch-hover::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+.glitch-hover::before {
+  color: #ff7ab6;
+  clip-path: inset(0 0 55% 0);
+}
+.glitch-hover::after {
+  color: #19d4c1;
+  clip-path: inset(45% 0 0 0);
+}
+.glitch-hover:hover::before,
+.glitch-hover:hover::after {
+  opacity: 0.7;
+  animation: glitch-shift 0.35s ease-in-out;
+}
+@keyframes glitch-shift {
+  0%   { transform: translate(0); }
+  20%  { transform: translate(-3px, 1px); }
+  40%  { transform: translate(2px, -1px); }
+  60%  { transform: translate(-1px, 2px); }
+  80%  { transform: translate(1px, -2px); }
+  100% { transform: translate(0); }
+}
+
+/* =========================================================
+   NEW: Particle Canvas
+   ========================================================= */
+#particles-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* =========================================================
+   NEW: Pulsing Animations
+   ========================================================= */
+.pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(124,92,255,0.2); }
+  50%      { box-shadow: 0 0 40px rgba(124,92,255,0.4), 0 0 60px rgba(25,212,193,0.15); }
+}
+.float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(-12px) rotate(2deg); }
+}
+
+/* =========================================================
+   NEW: Enhanced Progress Bar Shimmer
+   ========================================================= */
+.progress-bar {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3), var(--accent));
+  background-size: 200% 100%;
+  animation: progress-shimmer 3s linear infinite;
+}
+@keyframes progress-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* =========================================================
+   NEW: Section divider animation
+   ========================================================= */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line-strong), transparent);
+  width: 0%;
+  transition: width 1.2s var(--ease-out);
+}
+.section-divider.in-view { width: 100%; }
+
+/* =========================================================
+   NEW: Bounce-in animation
+   ========================================================= */
+.bounce-in {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out);
+}
+.bounce-in.in-view {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* =========================================================
+   NEW: Cover meta enhanced hover
+   ========================================================= */
+.cover-meta li {
+  transition: border-color 0.3s var(--ease), transform 0.3s var(--ease);
+}
+.cover-meta li:hover {
+  border-left-color: var(--accent);
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   NEW: Enhanced scroll indicator
+   ========================================================= */
+.scroll-indicator {
+  transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+.scroll-indicator:hover {
+  border-color: var(--accent-2);
+  box-shadow: 0 0 20px rgba(25,212,193,0.3);
+}
+
+/* =========================================================
+   NEW: Skill tag shimmer
+   ========================================================= */
+.chip-row li {
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s var(--ease), color 0.3s var(--ease), transform 0.2s var(--ease);
+}
+.chip-row li::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+  transition: left 0.6s var(--ease);
+}
+.chip-row li:hover::before {
+  left: 100%;
+}
+.chip-row li:hover {
+  border-color: var(--accent-2);
+  color: var(--ink);
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   NEW: Contact row magnetic feel
+   ========================================================= */
+.contact-row {
+  transition: color 0.2s var(--ease), transform 0.2s var(--ease), padding-left 0.2s var(--ease);
+}
+.contact-row:hover {
+  transform: translateX(6px);
+  padding-left: 8px;
+}
+
+/* =========================================================
+   NEW: CTA shine effect
+   ========================================================= */
+.cta {
+  position: relative;
+  overflow: hidden;
+}
+.cta::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  transition: left 0.5s var(--ease);
+}
+.cta:hover::before {
+  left: 100%;
+}

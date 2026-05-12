@@ -11,6 +11,13 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Custom cursor -->
+  <div class="custom-cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-trail" id="cursor-trail" aria-hidden="true"></div>
+
+  <!-- Particle canvas -->
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
   <!-- Ambient parallax background -->
   <div class="cosmos" aria-hidden="true">
     <div class="aurora aurora-1" data-parallax="0.25"></div>
@@ -104,10 +111,10 @@
         <div class="cover reveal">
           <p class="eyebrow">Portfolio · 2026</p>
           <h1 class="display">
-            <span class="display-line">Faisal</span>
-            <span class="display-line outline">Haqqani</span>
+            <span class="display-line scramble-text" data-text="Faisal">Faisal</span>
+            <span class="display-line outline scramble-text" data-text="Haqqani">Haqqani</span>
           </h1>
-          <p class="lede">Sales Growth · SDR · Business Development</p>
+          <p class="lede typewriter" data-text="Sales Growth · SDR · Business Development">Sales Growth · SDR · Business Development</p>
           <ul class="cover-meta">
             <li><span>Location</span>Makassar, Indonesia</li>
             <li><span>Email</span>contact.faisalhaq@gmail.com</li>
@@ -127,9 +134,9 @@
       <div class="scene">
         <header class="section-header reveal">
           <span class="section-tag">01 · Professional Summary</span>
-          <h2>About me</h2>
+          <h2 class="glitch-hover" data-text="About me">About me</h2>
         </header>
-        <div class="glass tilt-card summary-card reveal">
+        <div class="glass tilt-card glow-border summary-card reveal">
           <p>
             Sales professional with hands-on experience in outbound prospecting,
             lead qualification, and CRM-based pipeline management across startup
@@ -149,25 +156,25 @@
       <div class="scene">
         <header class="section-header reveal">
           <span class="section-tag">02 · Core Value</span>
-          <h2>What I bring to the role</h2>
+          <h2 class="glitch-hover" data-text="What I bring to the role">What I bring to the role</h2>
         </header>
         <div class="value-grid">
-          <article class="glass tilt-card value-card reveal" style="--i:1">
+          <article class="glass tilt-card glow-border value-card reveal" style="--i:1">
             <div class="value-num">01</div>
             <h3>Pipeline Generation</h3>
             <p>Build early-stage pipeline through cold outreach and account targeting.</p>
           </article>
-          <article class="glass tilt-card value-card reveal" style="--i:2">
+          <article class="glass tilt-card glow-border value-card reveal" style="--i:2">
             <div class="value-num">02</div>
             <h3>Message Strategy</h3>
             <p>Convert discovery insights into clear sales messaging and follow-up strategy.</p>
           </article>
-          <article class="glass tilt-card value-card reveal" style="--i:3">
+          <article class="glass tilt-card glow-border value-card reveal" style="--i:3">
             <div class="value-num">03</div>
             <h3>CRM Discipline</h3>
             <p>Maintain clean CRM discipline for better forecasting and team visibility.</p>
           </article>
-          <article class="glass tilt-card value-card reveal" style="--i:4">
+          <article class="glass tilt-card glow-border value-card reveal" style="--i:4">
             <div class="value-num">04</div>
             <h3>Analysis &amp; Reporting</h3>
             <p>Blend sales execution with analytical thinking — A/B testing and reporting.</p>
@@ -181,7 +188,7 @@
       <div class="scene">
         <header class="section-header reveal">
           <span class="section-tag">03 · Experience Timeline</span>
-          <h2>Roles in order</h2>
+          <h2 class="glitch-hover" data-text="Roles in order">Roles in order</h2>
         </header>
         <div class="timeline">
           <div class="timeline-track"></div>
@@ -236,10 +243,10 @@
       <div class="scene">
         <header class="section-header reveal">
           <span class="section-tag">04 · Recent Roles</span>
-          <h2>2025 – 2026</h2>
+          <h2 class="glitch-hover" data-text="2025 – 2026">2025 – 2026</h2>
         </header>
         <div class="exp-grid">
-          <article class="glass tilt-card exp-card reveal">
+          <article class="glass tilt-card glow-border exp-card reveal">
             <header class="exp-head">
               <div>
                 <h3>Flowmingo AI</h3>
@@ -254,7 +261,7 @@
             </ul>
           </article>
 
-          <article class="glass tilt-card exp-card reveal">
+          <article class="glass tilt-card glow-border exp-card reveal">
             <header class="exp-head">
               <div>
                 <h3>Skillstory</h3>
@@ -277,10 +284,10 @@
       <div class="scene">
         <header class="section-header reveal">
           <span class="section-tag">05 · Earlier Roles</span>
-          <h2>2019 – 2024</h2>
+          <h2 class="glitch-hover" data-text="2019 – 2024">2019 – 2024</h2>
         </header>
         <div class="exp-grid exp-grid--3">
-          <article class="glass tilt-card exp-card reveal">
+          <article class="glass tilt-card glow-border exp-card reveal">
             <header class="exp-head">
               <div>
                 <h3>Sinergi Business Solution</h3>
@@ -295,7 +302,7 @@
             </ul>
           </article>
 
-          <article class="glass tilt-card exp-card reveal">
+          <article class="glass tilt-card glow-border exp-card reveal">
             <header class="exp-head">
               <div>
                 <h3>Healthina Indonesia</h3>
@@ -310,7 +317,7 @@
             </ul>
           </article>
 
-          <article class="glass tilt-card exp-card reveal">
+          <article class="glass tilt-card glow-border exp-card reveal">
             <header class="exp-head">
               <div>
                 <h3>Markaz Inayah</h3>
@@ -332,15 +339,15 @@
       <div class="scene">
         <header class="section-header reveal">
           <span class="section-tag">06 · Education</span>
-          <h2>Formal &amp; applied training</h2>
+          <h2 class="glitch-hover" data-text="Formal &amp; applied training">Formal &amp; applied training</h2>
         </header>
         <div class="edu-grid">
-          <article class="glass tilt-card edu-card reveal">
+          <article class="glass tilt-card glow-border edu-card reveal">
             <span class="badge">Jul 2018 – Feb 2022</span>
             <h3>Sekolah Tinggi Agama Islam Sabili Bandung</h3>
             <p>Education Studies · Bandung, Indonesia</p>
           </article>
-          <article class="glass tilt-card edu-card reveal">
+          <article class="glass tilt-card glow-border edu-card reveal">
             <span class="badge">May – Jul 2025</span>
             <h3>MySkill Indonesia</h3>
             <p>UI/UX Research &amp; Design Intensive Bootcamp</p>
@@ -354,10 +361,10 @@
       <div class="scene">
         <header class="section-header reveal">
           <span class="section-tag">07 · Certifications &amp; Achievements</span>
-          <h2>Certificates &amp; awards</h2>
+          <h2 class="glitch-hover" data-text="Certificates &amp; awards">Certificates &amp; awards</h2>
         </header>
         <div class="cert-grid">
-          <article class="glass tilt-card cert-card reveal">
+          <article class="glass tilt-card glow-border cert-card reveal">
             <div class="cert-ribbon">HubSpot Academy</div>
             <h3>HubSpot Sales Hub Software Certified</h3>
             <p class="muted">Validity: Dec 2025 – Jan 2027</p>
@@ -370,7 +377,7 @@
             </ul>
           </article>
 
-          <article class="glass tilt-card cert-card reveal">
+          <article class="glass tilt-card glow-border cert-card reveal">
             <div class="cert-ribbon ribbon-2">MySkill Indonesia</div>
             <h3>Best Final Project — UI/UX Design Batch 21</h3>
             <p class="muted">Awarded Jun 2025</p>
@@ -393,10 +400,10 @@
       <div class="scene">
         <header class="section-header reveal">
           <span class="section-tag">08 · Tools &amp; Skills</span>
-          <h2>What I work with</h2>
+          <h2 class="glitch-hover" data-text="What I work with">What I work with</h2>
         </header>
         <div class="skills-grid">
-          <article class="glass tilt-card skill-group reveal">
+          <article class="glass tilt-card glow-border skill-group reveal">
             <h3>Sales &amp; CRM</h3>
             <ul class="chip-row">
               <li>HubSpot</li><li>Apollo</li><li>Notion</li>
@@ -405,21 +412,21 @@
               <li>B2B Sales</li><li>SaaS Sales</li>
             </ul>
           </article>
-          <article class="glass tilt-card skill-group reveal">
+          <article class="glass tilt-card glow-border skill-group reveal">
             <h3>Data &amp; Analysis</h3>
             <ul class="chip-row">
               <li>Google Sheets</li><li>SPSS</li>
               <li>A/B Testing</li><li>Performance Reporting</li>
             </ul>
           </article>
-          <article class="glass tilt-card skill-group reveal">
+          <article class="glass tilt-card glow-border skill-group reveal">
             <h3>Design &amp; Marketing</h3>
             <ul class="chip-row">
               <li>Figma</li><li>Meta Business Suite</li>
               <li>Mailchimp</li><li>Canva</li>
             </ul>
           </article>
-          <article class="glass tilt-card skill-group reveal">
+          <article class="glass tilt-card glow-border skill-group reveal">
             <h3>Languages</h3>
             <ul class="chip-row">
               <li>English — Intermediate</li>
@@ -435,7 +442,7 @@
       <div class="scene">
         <header class="section-header reveal">
           <span class="section-tag">09 · Focus &amp; Contact</span>
-          <h2>Open for SDR, BDR &amp; AE-track roles (remote or hybrid)</h2>
+          <h2 class="glitch-hover" data-text="Open for SDR, BDR &amp; AE-track roles (remote or hybrid)">Open for SDR, BDR &amp; AE-track roles (remote or hybrid)</h2>
         </header>
         <div class="contact-wrap">
           <div class="focus-list glass tilt-card reveal">
