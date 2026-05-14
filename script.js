@@ -458,6 +458,56 @@
     observer.observe(el);
   });
 
+
+  // =========================================================
+  // NEW: Lightbox Gallery
+  // =========================================================
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxClose = document.getElementById('lightbox-close');
+
+  document.querySelectorAll('.doc-item[data-lightbox]').forEach((item) => {
+    item.addEventListener('click', () => {
+      const src = item.dataset.lightbox;
+      const alt = item.querySelector('img')?.alt || '';
+      lightboxImg.src = src;
+      lightboxImg.alt = alt;
+      lightbox.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove('is-open');
+    document.body.style.overflow = '';
+    setTimeout(() => { lightboxImg.src = ''; }, 300);
+  }
+
+  lightboxClose?.addEventListener('click', closeLightbox);
+  lightbox?.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('is-open')) {
+      closeLightbox();
+    }
+  });
+
+  // =========================================================
+  // NEW: Doc gallery reveal observer
+  // =========================================================
+  document.querySelectorAll('.doc-item.reveal').forEach((el) => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2, rootMargin: '0px 0px -5% 0px' });
+    observer.observe(el);
+  });
+
   // ---------- Initialize ----------
   onScrollFrame();
   document.querySelectorAll('.section--cover .reveal').forEach((el) => el.classList.add('in-view'));
